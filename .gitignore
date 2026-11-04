@@ -1,0 +1,6 @@
+node_modules/
+_site/
+*.zip
+ieum-backup-*.json
+*.ics
+.DS_Store
