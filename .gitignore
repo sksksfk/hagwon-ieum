@@ -4,3 +4,10 @@ _site/
 ieum-backup-*.json
 *.ics
 .DS_Store
+
+# Never commit personal exports or credentials
+*.ieum.json
+hagwon-ieum-encrypted-*.json
+*backup*.json
+.env
+*.pem
