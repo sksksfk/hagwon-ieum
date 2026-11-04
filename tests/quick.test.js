@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {quickValidatePIN,trialOpen,quickSealSecret,quickOpenSecret} from '../quick.js';
+const secret='Fictional-recovery-secret-for-tests-14';
+let sealed;
+test('quick PIN accepts exactly four ASCII digits including leading zero',()=>{assert.equal(quickValidatePIN('0012'),'0012');for(const pin of ['123','12345','１２３４','a123',' 123','1234 ',1234,null])assert.throws(()=>quickValidatePIN(pin));});
+test('trial ends at Korean midnight after December 31, 2026',()=>{assert.equal(trialOpen(Date.parse('2026-12-31T23:59:59+09:00')),true);assert.equal(trialOpen(Date.parse('2027-01-01T00:00:00+09:00')),false);assert.equal(trialOpen(NaN),false);});
+test('device PIN seals recovery secret and does not store PIN or plaintext',async()=>{sealed=await quickSealSecret(secret,'0012','synthetic-scope:salt');assert.equal(sealed.deviceKey.extractable,false);assert.equal(JSON.stringify(sealed).includes(secret),false);assert.equal(JSON.stringify(sealed).includes('0012'),false);assert.equal(await quickOpenSecret(sealed,'0012','synthetic-scope:salt'),secret);});
+test('wrong PIN and wrong vault binding fail with a generic message',async()=>{await assert.rejects(quickOpenSecret(sealed,'1234','synthetic-scope:salt'),/PINが|PIN이/);await assert.rejects(quickOpenSecret(sealed,'0012','another-vault'),/PIN이/);});
+test('tampered PIN record fails authentication',async()=>{const copy={...sealed,ciphertext:(sealed.ciphertext[0]==='A'?'B':'A')+sealed.ciphertext.slice(1)};await assert.rejects(quickOpenSecret(copy,'0012','synthetic-scope:salt'),/PIN이/);});
+test('each enrollment uses distinct salts, IVs and device keys',async()=>{const other=await quickSealSecret(secret,'0012','synthetic-scope:salt');assert.notEqual(other.salt,sealed.salt);assert.notEqual(other.iv,sealed.iv);assert.notEqual(other.ciphertext,sealed.ciphertext);assert.notEqual(other.deviceKey,sealed.deviceKey);});

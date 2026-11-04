@@ -35,7 +35,7 @@ jobs:
         run: |
           set -eu
           mkdir -p _site
-          for file in index.html styles.css app.js core.js vault.js manifest.webmanifest sw.js icon.svg icon-512.png; do
+          for file in index.html styles.css app.js core.js vault.js quick.js manifest.webmanifest sw.js icon.svg icon-512.png; do
             test -f "$file"
             cp "$file" _site/
           done

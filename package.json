@@ -1,11 +1,12 @@
 {
   "name": "ieum-family",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node server.js",
     "test": "node --test",
     "build": "node build.js"
-  }
+  },
+  "license": "SEE LICENSE IN LICENSE"
 }

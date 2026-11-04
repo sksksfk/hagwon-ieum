@@ -1,21 +1,10 @@
-MIT License
-
+학원이음 개인·비상업용 이용허락 v1 (1.4.0 이후 신규 배포분)
 Copyright (c) 2026 Ieum contributors
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+개인적·비상업적인 사용, 복제, 수정 및 비상업적 재배포를 허용합니다. 복제·수정·재배포 시 저작권 고지와 이 이용 조건을 유지해야 합니다. 유료 판매, 재판매, 유료 서비스에 포함, 상업적 배포 또는 영업 목적 사용에는 권리자의 별도 서면 허락이 필요합니다. 제3자 소프트웨어·이미지·상표 등의 권리는 각각의 조건을 따르며 이 허락에 포함되지 않습니다.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+이 소프트웨어는 있는 그대로 제공되며 법률이 허용하는 범위에서 명시적·묵시적 보증을 하지 않습니다. 법률상 배제할 수 없는 책임을 제외하고 사용·데이터 손실 등에 대한 책임을 제한합니다. 아이의 안전, 실제 도착·인계, 범죄 예방을 보장하지 않습니다.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+이 조건은 이 조건으로 새롭게 제공되는 버전에 적용됩니다. GitHub 커밋 a602a37 및 그 이전에 MIT로 배포된 버전은 기존 MIT 조건을 유지하며, 이미 부여된 MIT 권한을 소급하여 취소하지 않습니다. 기존 MIT 버전의 재사용과 이후 신규 버전의 이용 조건은 구분해야 합니다.
+
+이 안내는 전문 법률 검토를 대신하지 않습니다. 별도 이용 허락 문의: sportsn@naver.com
